@@ -1,1 +1,1 @@
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\%USERNAME%\<location of .ps1>"
+powershell.exe -ExecutionPolicy Bypass -File "%USERPROFILE%\<location of .ps1>"
