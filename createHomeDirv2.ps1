@@ -23,7 +23,7 @@ New-Item -ItemType directory -Path $dir
 Set-ADUser -Identity $user -HomeDirectory ($user) -HomeDrive "H:"
 
 # Give domain\user full access to individual folder, as well as presents permissions to relevant parties i.e. default accounts and already present ACLs
-$fileSystemAccessFule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $permission
+$fileSystemAccessRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $permission
 $acl.SetAccessRule($fileSystemAccessRule)
 $acl.SetOwner($object)
 
