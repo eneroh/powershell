@@ -33,5 +33,13 @@ $acl.SetOwner($object)
 #Apply the folder permission
 $acl | Set-Acl -Path $dir
 
-#shoutout to doc: (helped me gain a srs understanding)
-#https://ss64.com/ps/set-acl.html
+# Set-up smb sharing and permissions as per procedure
+New-SmbShare -Name $user$ -Path $dir -FullAccess $user
+________________________________
+# Shoutouts/Inspiration
+
+# shoutout to doc: (helped me gain a srs understanding)
+# https://ss64.com/ps/set-acl.html
+
+# shoutout to doc: (helped me understand like 2 lines (smbshares aha)
+# https://mcpmag.com/articles/2017/07/13/creating-shares-in-windows-using-the-smbshare-module.aspx
