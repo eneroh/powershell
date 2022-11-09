@@ -1,4 +1,4 @@
-# Default perms for entire folder structuring, great for systems administrators
+# Default perms for entire folder structuring, great for systems administrators building a ground up on-prem
 
 --- Coming later ---
 
