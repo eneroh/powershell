@@ -5,7 +5,7 @@
 _____________________________
 
 # createHomeDirv2.ps1
-# Don't ask about v1 it's not as good and made by an entirely different person *cough*
+# Don't ask about v1 it's not as good and made by an entirely different person *cough*... Also was a basic af batch script that just created a folder aha
 
 # Simpler honed in file permission set-up for those that already have a default file/folder permissions ACL base
 
