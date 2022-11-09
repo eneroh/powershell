@@ -11,7 +11,7 @@ $locgroup = "<location based group>","<location based group>"
 foreach($user in $data) {
   Add-ADPrincipalGroupMembership $user -memberof $groups
   
-  if ($office -eq '<location>' {
+  if ($office -eq '<location>') {
     Add-ADPrincipalGroupMembership $user -memberof $locgroup
   }
 }
