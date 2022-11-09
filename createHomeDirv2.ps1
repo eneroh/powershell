@@ -9,7 +9,7 @@ _____________________________
 # Base operators
 $user = %USERPROFILE%/DESKTOP/user.txt
 $parent = "Parent Directory"
-$dir = Actual dir of user's custom directory
+$dir = Actual dir of user'\s custom directory
 $main = "Network Drive user location"
 $permission = $user, 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow'
 $object = New-Object System.Security.Principal.Ntaccount("$user")
