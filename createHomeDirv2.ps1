@@ -11,7 +11,7 @@ _____________________________
 
 # Base operators
 $user = %USERPROFILE%/DESKTOP/user.txt
-$parent = "Parent Directory"
+$parent = "Parent Directory" <The directory before the $dir>
 $dir = Actual dir of users custom directory
 $main = "Network Drive user location"
 $permission = $user, 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow'
