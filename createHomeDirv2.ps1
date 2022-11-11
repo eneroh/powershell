@@ -22,7 +22,7 @@ $acl = Get-Acl $dir
 New-Item -ItemType directory -Path $dir
 
 # Gives user required H drive letter tied to their AD account
-Set-ADUser -Identity $user -HomeDirectory ($user) -HomeDrive "H:"
+Set-ADUser -Identity $user -HomeDirectory $user -HomeDrive "H:"
 
 # Give domain\user full access to individual folder, as well as presents permissions to relevant parties i.e. default accounts and already present ACLs
 $fileSystemAccessRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $permission
