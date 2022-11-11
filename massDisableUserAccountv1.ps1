@@ -23,7 +23,7 @@ foreach($user in $data) {
   # Moves former active folders required by user to the !del folder
   Move-Item -Path D:\Users\$user -Destination D:\Users\!del
   
-  # Generate all groups and runs the command beneath until all groups have been actioned
+  # Generate all groups the user's in and runs the command beneath until all the user's groups have been actioned
   foreach($group in $groups) {
     # Removes user from all former groups they were a part of
     Remove-ADGroupMember -Identity $group -Members $user
