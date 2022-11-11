@@ -10,12 +10,16 @@ $office = Get-ADUser -Identity $user -Properties City | Select-Object -ExpandPro
 $state = Get-ADUser -Identity $user -Properties State | Select-Object -ExpandProperty State
 $locgroup = "<location based group>","<location based group>"
 
+# The mass function, for every user located in the user text doc action the command/s below
 foreach($user in $data) {
+  # Set user's command to <Company Name"
   Set-ADUser -Identity $user -Company "<Company Name>" -Office $state
-
+  # Add user to relevant default groups
   Add-ADPrincipalGroupMembership $user -memberof $groups
   
+  # If office is located at <location> provide command below
   if ($office -eq '<location>') {
+    # Gives user location based groups
     Add-ADPrincipalGroupMembership $user -memberof $locgroup
   }
 }
