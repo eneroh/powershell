@@ -1,3 +1,6 @@
+# mass_defaultprofilegroups.ps1
+# V1 of the great user creation and group assignment script. Brings ~3 pages of work to a single script
+
 $groups = "","","","$office`<group>"
 $user = Get-Content %USERPROFILE%\Desktop\<location of txt doc>
 $data = Get-Content %USERPROFILE%\Desktop\<location of txt doc>
