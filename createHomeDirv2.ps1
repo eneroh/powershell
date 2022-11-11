@@ -1,3 +1,6 @@
+# createHomeDirv2.ps1
+# Script that creates custom home drive and more, just add a user ;)
+
 # Default perms for entire folder structuring, great for systems administrators building a ground up on-prem file perms sol.
 
 --- Coming later ---
