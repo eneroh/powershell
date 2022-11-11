@@ -1,3 +1,6 @@
+# mass_defaultprofilegroupsv2.ps1
+# V2 and the best one yet, larger but definitely better in this instance
+
 # base statements 
 $groups = "","","","$office`<group>"
 $user = Get-Content %USERPROFILE%\Desktop\<location of txt doc>
