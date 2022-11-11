@@ -1,4 +1,4 @@
-# massDeleteCustomHomeDrive.ps1
+# massDeleteCustomHomeDrivev2.ps1
 # Deletes custom home drive en masse, just add multiple users to user.txt doc
 
 $user = Get-Content %USERPROFILE%\Desktop\<location of user.txt>
