@@ -16,7 +16,7 @@ $groups = Get-ADUser -Identity $user -Properties Memberof | Select-Object -Expan
 
 # The added en masse functionality/special sauce
 foreach($user in $data) {
-  # Adds relevant description to descriptino field in AD
+  # Adds relevant description to description field in AD
   Set-ADUser $user -Description $desc
   # Moves user from Active OU to Disabled OU
   Move-ADObject -Identity $ou -TargetPath $disabledOU
