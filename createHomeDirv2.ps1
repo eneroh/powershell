@@ -10,7 +10,7 @@ _____________________________
 # Simpler honed in file permission set-up for those that already have a default file/folder permissions ACL base
 
 # Base operators
-$user = %USERPROFILE%/DESKTOP/user.txt
+$user = Get-Content %USERPROFILE%/DESKTOP/user.txt
 $parent = "Parent Directory" <The directory before the $dir>
 $dir = Actual dir of users custom directory
 $main = "Network Drive user location"
@@ -18,8 +18,10 @@ $permission = $user, 'FullControl', 'ContainerInherit, ObjectInherit', 'None', '
 $object = New-Object System.Security.Principal.Ntaccount("$user")
 $acl = Get-Acl $dir
 
-# Gives user required H drive letter tied to their AD account
+# Give user necessary folders
 New-Item -ItemType directory -Path $dir
+
+# Gives user required H drive letter tied to their AD account
 Set-ADUser -Identity $user -HomeDirectory ($user) -HomeDrive "H:"
 
 # Give domain\user full access to individual folder, as well as presents permissions to relevant parties i.e. default accounts and already present ACLs
