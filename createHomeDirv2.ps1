@@ -49,5 +49,5 @@ ________________________________
 # shoutout to doc: (helped me gain a srs understanding around powershell acls)
 # https://ss64.com/ps/set-acl.html
 
-# shoutout to doc: (helped me understand like 1 line specifically line 37 smbshares aha)
+# shoutout to doc: (helped me understand like 1 line specifically line 45 smbshares aha)
 # https://mcpmag.com/articles/2017/07/13/creating-shares-in-windows-using-the-smbshare-module.aspx
