@@ -1,4 +1,4 @@
-# massdisableExpiredUserAccount.ps1
+# massDisableUserAccount.ps1
 # This script will automove and do all necessary functions to automate the way you expire AD accounts
 
 # base operators
