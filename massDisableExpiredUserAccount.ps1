@@ -14,12 +14,18 @@ $ou = $dName
 $group = Get-ADUser -Identity $user -Properties Memberof | Select-Object -ExpandProperty Memberof
 $groups = Get-ADUser -Identity $user -Properties Memberof | Select-Object -ExpandProperty Memberof
 
+# The added en masse functionality/special sauce
 foreach($user in $data) {
+  # Adds relevant description to descriptino field in AD
   Set-ADUser $user -Description $desc
+  # Moves user from Active OU to Disabled OU
   Move-ADObject -Identity $ou -TargetPath $disabledOU
+  # Moves former active folders required by user to the !del folder
   Move-Item -Path D:\Users\$user -Destination D:\Users\!del
   
+  # Generate all groups and runs the command beneath until all groups have been actioned
   foreach($group in $groups) {
+    # Removes user from all former groups they were a part of
     Remove-ADGroupMember -Identity $group -Members $user
   }
 }
