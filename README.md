@@ -1,6 +1,7 @@
 # powershell
 
 ## Summary
+Mixture of cmd and powershell knowledge
 
 ## Commands
 
