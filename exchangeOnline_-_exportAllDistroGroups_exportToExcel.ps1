@@ -1,4 +1,4 @@
-### getAllDistroGroups_exportToExcel.ps1 ###
+# getAllDistroGroups_exportToExcel.ps1 #
 
 # requires modules
 # - import-excel
