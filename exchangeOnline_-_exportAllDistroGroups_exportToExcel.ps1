@@ -1,4 +1,6 @@
-#requires modules
+### getAllDistroGroups_exportToExcel.ps1 ###
+
+# requires modules
 # import-excel
 # ExchangeOnlineManagement
 
