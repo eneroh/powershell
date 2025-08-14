@@ -1,3 +1,7 @@
+# mass_getadgroupsandmembersv2.ps1
+# I wrote v1 but them I manipulated chatgpt to add the new line formatting I wanted
+# This is truly the final and most evolved version of this script that could possibly exist, I think
+
 $groups = Get-Content "C:\temp\export.txt" | Select-Object -Skip 3
 
 $data = @()
