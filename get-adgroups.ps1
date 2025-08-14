@@ -1,0 +1,1 @@
+Get-ADGroup -ResultSize Unlimited | Select-Object -Property Name | Out-File -FilePath "C:\temp\export.txt"
