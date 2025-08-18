@@ -7,7 +7,7 @@ $groups = Get-Content "C:\temp\export.txt" | Select-Object -Skip 3
 
 $data = foreach($group in $groups)
 {
-  Get-ADGroup -Identity "$groups" | Select-Object -Property Name | Sort Name
-  Get-ADGroupMember -Identity "$groups" | Select-Object -Property Name | Sort Name
+  Get-ADGroup -Identity "$group" | Select-Object -Property Name | Sort Name
+  Get-ADGroupMember -Identity "$group" | Select-Object -Property Name | Sort Name
 }
 $data | Export-CSV -Path "C:\temp\final.csv" -NoTypeInformation
